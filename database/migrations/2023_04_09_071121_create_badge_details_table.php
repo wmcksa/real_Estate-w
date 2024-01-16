@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBadgeDetailsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('badge_details', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('badge_id')->index();
+            $table->integer('language_id');
+            $table->string('rank_name')->nullable();
+            $table->string('rank_level')->nullable();
+            $table->longText('description')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('badge_details');
+    }
+}
