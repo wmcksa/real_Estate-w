@@ -2,7 +2,7 @@
 
 $arr = [
     'dashboard' => [
-        'label' => "Dashboard",
+        'label' => "لوحة التحكم",
         'access' => [
             'view' => ['admin.dashboard'],
             'add' => [],
@@ -11,7 +11,7 @@ $arr = [
         ],
     ],
     'manage_role' =>[
-        'label' => "Role Permission",
+        'label' => "الصلاحيات",
         'access' => [
             'view' => ['admin.staff'],
             'add' => ['admin.storeStaff'],

@@ -78,6 +78,8 @@ class BasicController extends Controller
         $reqData = Purify::clean($request->except('_token', '_method'));
         $request->validate([
             'site_title' => 'required',
+            'whatsapp_number' => 'required',
+
             'base_color' => 'sometimes|required',
             'time_zone' => 'required',
             'currency' => 'required',
@@ -90,6 +92,8 @@ class BasicController extends Controller
         ]);
 
         config(['basic.site_title' => $reqData['site_title']]);
+        config(['basic.whatsapp_number' => $reqData['whatsapp_number']]);
+
         if($request->has('base_color')){
             config(['basic.base_color' => $reqData['base_color']]);
         }

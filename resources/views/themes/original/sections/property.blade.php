@@ -14,6 +14,7 @@
                     @foreach($featureProperties as $key => $property)
                             <div class="col-md-6 col-lg-4">
                                 @include($theme.'partials.propertyBox')
+
                             </div>
                     @endforeach
                 </div>

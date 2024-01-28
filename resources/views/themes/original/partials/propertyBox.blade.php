@@ -69,9 +69,8 @@
                     @lang('Invest Now')
                 @endif
             </button>
-
-            <a href="{{ route('contact') }}">
-                @lang('Contact Us')
+                <a aria-label="Chat on WhatsApp" href="https://wa.me/{{Config::get('basic.whatsapp_number')}}/?text=urlencodedtext">
+                    <img alt="Chat on WhatsApp" width="50" src="{{ asset('assets/img/1.png') }}" />
             </a>
         </div>
 

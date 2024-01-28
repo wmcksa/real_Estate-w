@@ -23,6 +23,17 @@
                         @enderror
                     </div>
 
+                    <div class="form-group col-md-3">
+                        <label class="text-dark">رقم توصل الوتساب </label>
+                        <input type="test" name="whatsapp_number"
+                               value="{{ old('whatsapp_number') ?? $control->whatsapp_number ??  Config::get('basic.whatsapp_number') }}"
+                               class="form-control ">
+
+                        @error('whatsapp_number')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
 
                     <div class="form-group col-md-3">
                         <label class="text-dark">@lang('APP TIMEZONE')</label>
